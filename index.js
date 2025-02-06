@@ -4,6 +4,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
+app.use(express.static('dist'))
 
 //learning about MIDDLEWARE: creating a middleware to log to console the request info
 const requestLogger = (request, response, next) => {
